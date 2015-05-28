@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'therubyracer'
 gem 'less-rails-bootstrap'
 gem 'rspec-rails'
+gem "responders"
 
 group :development do
   gem 'spring'

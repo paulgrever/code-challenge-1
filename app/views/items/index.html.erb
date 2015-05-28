@@ -12,8 +12,21 @@
       <p>
         <%= item.description %>
       </p>
+      <div class="row buttons">
+        <div class="col-sm-6">
+          <%= button_to("one click order", orders_path(item_id: item.id), class: "btn btn-sm btn-warning" ) %>
+        </div>
+        <% if wishlist_item?(item)%>
+            <div class="col-offset-sm-1 col-sm-5">
+              <button class="btn btn-sm btn-info remove" id="item-<%=item.id %>" data-item=<%=item.id  %>>remove from favorites</button>
+          </div>
+        <% else %>
+          <div class="col-offset-sm-1 col-sm-5">
+            <button class="btn btn-sm btn-info favorites" id="item-<%=item.id %>" data-item=<%=item.id  %>>add to favorites</button>
+          </div>
+        <% end %>
 
-      <%= button_to("one click order", orders_path(item_id: item.id) ) %>
+      </div>
     </div>
   <% end %>
 </div>
