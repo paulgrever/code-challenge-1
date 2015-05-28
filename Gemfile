@@ -22,6 +22,7 @@ group :development, :test do
   gem 'capybara'
   gem "launchy"
   gem 'pry', :require => 'pry'
+  gem 'mailcatcher'
 end
 
 group :test do 
