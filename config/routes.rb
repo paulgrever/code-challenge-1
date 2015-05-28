@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show, :create]
   resources :users,  only: [:index, :show]
+  resources :wishlist
 end
