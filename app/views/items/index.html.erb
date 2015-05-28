@@ -12,6 +12,8 @@
       <p>
         <%= item.description %>
       </p>
+
+      <%= button_to("one click order", orders_path(item_id: item.id) ) %>
     </div>
   <% end %>
 </div>
