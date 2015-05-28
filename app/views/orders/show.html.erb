@@ -1,0 +1,8 @@
+<h1>Order Number: <%= @order.id %></h1>
+
+
+<strong>Order Item:</strong> <p><%= @order.items.first.name %></p>
+<strong>Order Item Description:</strong> <p><%= @order.items.first.description %></p>
+<strong>Order Item Image:</strong> <p><img src="<%= @order.items.first.image_url %>"></p>
+
+<p>Ordered By: <%= @order.user.name %> </p>
