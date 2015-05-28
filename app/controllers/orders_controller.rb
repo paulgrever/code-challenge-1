@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
     @order = Order.new(amount: 1, user_id: User.first.id)
       if @order.save
         @order.items << item
+        OrderConfirmationMailer.order_confirm(item, @order).deliver
         redirect_to order_path(@order)
       else
         render(:back)
